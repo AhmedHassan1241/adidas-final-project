@@ -10,7 +10,7 @@ const HomeHero = () => {
           <div className="title-home w-xl-25 h-xl-50">
             <h1
               className="text-light"
-              style={{ fontWeight: "600", fontSize: "45px" }}
+              style={{ fontWeight: "600", fontSize: "45px" ,maxWidth:"70%" }}
             >
               END OF SEASON SALE: UP TO 50% OFF
             </h1>

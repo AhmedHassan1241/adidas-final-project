@@ -48,9 +48,3 @@ form-control {
     opacity: 0.5;
   }
 
-.navbar-toggler {
-    font-size: 25px;
-}
-.navbar-toggler:focus{
-    box-shadow: none;
-}

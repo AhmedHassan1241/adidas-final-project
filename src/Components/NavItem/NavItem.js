@@ -5,17 +5,21 @@ import { IoSearch } from "react-icons/io5";
 import { MdFavoriteBorder } from "react-icons/md";
 
 import styles from "./NavItem.module.css";
+import { useState } from "react";
 
 const NavItem = () => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+  // Toggle the navbar collapse
+  const handleToggle = () => {
+    setIsCollapsed(!isCollapsed);
+  };
+
   return (
     <>
-      <nav
-        className="navbar navbar-expand-xl"
-        style={{ flexWrap: "wrap", backgroundColor: "white" }}
-      >
-        <div className="container-fluid d-none d-xl-block">
+        <div className=" container-fluid d-none d-xl-block">
           <div
-            className={`${styles["up-nav"]} pb-4 pt-1  row ms-auto`}
+            className={`${styles["up-nav"]} pb-1 pt-1 row ms-auto`}
             style={{ width: "50%" }}
           >
             <div className="col-4">
@@ -47,21 +51,25 @@ const NavItem = () => {
             </div>
           </div>
         </div>
+      <nav
+        className="navbar navbar-expand-lg sticky-top shadow"
+        style={{ flexWrap: "wrap", backgroundColor: "white" }}
+      >
         <div
           className="container-fluid d-flex align-items-center "
           id="main-nav"
           style={{ backgroundColor: "#FFFFFF" }}
         >
           <button
-            className={`${styles["navbar-toggler"]}`}
+            className="navbar-toggler"
             type="button"
-            data-bs-toggle="collapse"
+            onClick={handleToggle}
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
-            aria-expanded="false"
+            aria-expanded={isCollapsed ? "true":"false"}
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
           </button>
           <a
             className="navbar-brand m-auto"
@@ -75,7 +83,7 @@ const NavItem = () => {
             style={{ width: "100px" }}
           ></div>
           <div
-            className="collapse navbar-collapse collapses"
+            className={`collapse navbar-collapse ${isCollapsed?"show":""}`}
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav  mb-2 mb-lg-0 m-auto">
@@ -126,7 +134,7 @@ const NavItem = () => {
                 className={`${styles["from-control"]}me-2`}
                 placeholder="Search"
                 aria-label="Search"
-                style={{border:"1px solid black",borderRadius:"4px"}}
+                style={{ border: "1px solid black", borderRadius: "4px" }}
               />
               <IoSearch
                 className="position-relative fs-4"

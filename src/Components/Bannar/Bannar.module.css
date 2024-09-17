@@ -43,14 +43,13 @@ p{
 .banner div p a:hover{
     border-bottom: 1px solid #fff;
 }
-/* 
 
-.navbar-toggler {
+/* .navbar-toggler {
     font-size: 25px;
 }
 .navbar-toggler:focus{
     box-shadow: none;
-} */
+}  */
 /* 
 .home{
     background-image: url(img/homeImg.jpg);
