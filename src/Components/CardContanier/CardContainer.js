@@ -1,9 +1,7 @@
-import React from 'react'
-
+import React from "react";
+import styles from "./CardContainer.module.css";
 const CardContainer = () => {
-  return (
-    
-  )
-}
+  return <></>;
+};
 
-export default CardContainer
+export default CardContainer;
