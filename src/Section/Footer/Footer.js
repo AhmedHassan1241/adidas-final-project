@@ -10,10 +10,16 @@ import { FaChevronDown } from "react-icons/fa";
 
 import styles from "./Footer.module.css"
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Smooth scroll
+    });
+  };
   return (
     <div className={`${styles.all}`}>
         {/* <!-- BEFORE FOOTER --> */}
-<div className="up-page bg-body-secondary p-2 shadow-lg d-sm-none d-flex align-items-center justify-content-center gap-2" onclick="topPage()">
+<div className="up-page bg-body-secondary p-2 shadow-lg d-sm-none d-flex align-items-center justify-content-center gap-2" style={{cursor:"pointer"}} onClick={scrollToTop}>
     <FaChevronUp className="mt-1" style={{color: "#3e3c3c", height: "16px"}}></FaChevronUp>
     <p style={{margin: "0", fontWeight: "300"}} >BACK TO TOP</p>
 </div>

@@ -1,3 +1,4 @@
+import { PrimaryButton } from "../../Components";
 import styles from "./HomeHero.module.css";
 const HomeHero = () => {
   return (
@@ -10,7 +11,7 @@ const HomeHero = () => {
           <div className="title-home w-xl-25 h-xl-50">
             <h1
               className="text-light"
-              style={{ fontWeight: "600", fontSize: "45px" ,maxWidth:"70%" }}
+              style={{ fontWeight: "600", fontSize: "45px", maxWidth: "70%" }}
             >
               END OF SEASON SALE: UP TO 50% OFF
             </h1>
@@ -22,31 +23,13 @@ const HomeHero = () => {
             </p>
           </div>
           {/* <!-- BUTTON SHOP WOMMEN --> */}
-          <div className={`${styles["btn-wrapper"]} mt-2`}>
-            <a href="#.">
-              <span>
-                SHOP WOMENS <span className="fs-5">&#8594;</span>
-              </span>
-            </a>
-          </div>
+          <PrimaryButton>SHOP WOMENS</PrimaryButton>
           {/* <!-- BUTTON SHOP WOMMEN --> */}
           {/* <!-- BUTTON SHOP MENS --> */}
-          <div className={`${styles["btn-wrapper"]} mt-2`}>
-            <a href="#.">
-              <span >
-                SHOP MENS <span className="fs-5">&#8594;</span>
-              </span>
-            </a>
-          </div>
+          <PrimaryButton>SHOP MENS </PrimaryButton>
           {/* <!-- BUTTON SHOP MENS --> */}
           {/* <!-- BUTTON SHOP KIDS --> */}
-          <div className={`${styles["btn-wrapper"]} mt-2`}>
-            <a href="#.">
-              <span >
-                SHOP KIDS <span className="fs-5">&#8594;</span>
-              </span>
-            </a>
-          </div>
+          <PrimaryButton>SHOP KIDS </PrimaryButton>
           {/* <!-- BUTTON SHOP KIDS --> */}
         </div>
         <div

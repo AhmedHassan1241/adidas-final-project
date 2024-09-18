@@ -1,14 +1,17 @@
-import {
-  CardContainer
-} from "../../Components";
 
-const SeasonSale = () => {
+import { CarouselSliderSale, SeasonSaleCard, SectionHeader, SectionWrapper } from '../../Components';
+// import SeasonSaleData from '../../Data/SeasonSaleData';
+
+const SeasonSale = ({items,children}) => {
+
 
   return (
-    <>
-    <CardContainer/>
-      
-    </>
+    <SectionWrapper>
+      <SectionHeader>{children}</SectionHeader>
+     <CarouselSliderSale items={items}>
+                <SeasonSaleCard items={items}/>
+      </CarouselSliderSale>
+    </SectionWrapper>
   );
 };
 
